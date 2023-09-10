@@ -1,0 +1,116 @@
+/* Reset some default browser styles */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply a stylish background gradient to the body with a subtle animation */
+  body {
+    background: linear-gradient(135deg, #1E88E5, #FF6B6B); /* Gradient background from blue to red */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Text color for better contrast */
+    text-align: center;
+    padding: 20px;
+    animation: gradientChange 10s linear infinite alternate; /* Background gradient animation */
+  }
+  
+  @keyframes gradientChange {
+    0% {
+      background: linear-gradient(135deg, #1E88E5, #FF6B6B);
+    }
+    100% {
+      background: linear-gradient(135deg, #FF6B6B, #1E88E5);
+    }
+  }
+  
+  /* Style the header without rotation */
+  h2 {
+    font-size: 36px;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #FFC947; /* Yellow text color */
+    animation: colorChange 5s linear infinite alternate; /* Color-changing animation */
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #FFC947;
+    }
+    100% {
+      color: #6BFF6B; /* Green text color */
+    }
+  }
+  
+  /* Style the main content area */
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the input field and buttons with hover animations */
+  input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color and scale transitions */
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #FF6B6B; /* Red button background */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color and scale transitions */
+  }
+  
+  button:hover {
+    background-color: #FF4B4B; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+  }
+  
+  /* Style the hero image container with a pulsing animation */
+  #heroImage {
+    text-align: center;
+    margin-top: 20px;
+    animation: pulse 2s ease infinite; /* Pulsing animation */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Style the hero image itself with a slide-in and fade-in effect */
+  #heroImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0; /* Start with no opacity */
+    transform: translateX(-20px); /* Start slightly to the left */
+    animation: slideInFadeIn 1s ease-in-out forwards; /* Slide-in and fade-in animation */
+  }
+  
+  @keyframes slideInFadeIn {
+    0% {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
